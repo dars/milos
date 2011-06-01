@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/~Dars/milos';
+$config['base_url']	= 'http://localhost/~Dars/milos/admin';
 
 /*
 |--------------------------------------------------------------------------
