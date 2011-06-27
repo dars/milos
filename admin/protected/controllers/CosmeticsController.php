@@ -16,13 +16,15 @@ class CosmeticsController extends Controller
 			$model->attributes = $_POST['Content'];
 			if($model->save()){
 				$i = 0;
-				$count = count($_POST['his']['id']);
-				while($i<$count){
-					$model2 = Pix::model()->findByPk($_POST['his']['id'][$i]);
-					$model2->content = $_POST['his']['content'][$i];
-					$model2->updated_at = $time;
-					$model2->save();
-					$i++;
+				if(isset($_POST['his'])){
+					$count = count($_POST['his']['id']);
+					while($i<$count){
+						$model2 = Pix::model()->findByPk($_POST['his']['id'][$i]);
+						$model2->content = $_POST['his']['content'][$i];
+						$model2->updated_at = $time;
+						$model2->save();
+						$i++;
+					}
 				}
 				echo '{"success":true}';
 			}else{
