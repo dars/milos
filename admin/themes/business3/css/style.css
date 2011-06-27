@@ -1,0 +1,32 @@
+div.form label{
+	font:14px verdana;
+	margin-bottom:3px;
+	font-weight: normal;
+	display:block;
+}
+textarea,input[type='text'],input[type='password']{
+	border:1px #C7DBE9 solid;
+	color:#70818D;
+	font:14px verdana;
+	padding:5px;
+	background:#EBF2FF;
+}
+textarea:focus,input[type='text']:focus,input[type='password']:focus{
+	background:#FFFDEB;
+}
+textarea{
+	width:400px;
+	height:80px;
+}
+input[type='submit'],input[type='button']{
+	border:1px #C7DBE9 solid;
+	color:#70818D;
+	font:12px verdana;
+	padding:3px;
+	background:#EBF2FF;
+	width:100px;
+}
+input[type='submit']:hover,input[type='button']:hover{
+	background:#FFFDEB;
+	color:#333;
+}

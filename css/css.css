@@ -413,3 +413,9 @@
 	border-bottom-style: dashed;
 	border-bottom-color: #CCC;
 }
+.side_links{
+	font:13px arial,verdana;
+}
+.side_links a{
+	color:#000;
+}

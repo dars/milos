@@ -1,0 +1,553 @@
+2011/06/19 23:04:55 [error] [php] Cannot use a scalar value as an array (/Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php:1979)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/views/news/_form.php(24): CActiveForm->hiddenField()
+#1 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require()
+#2 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#4 /Users/dars/Sites/milos/admin/protected/views/news/create.php(15): NewsController->renderPartial()
+#5 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require()
+#6 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#7 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#8 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): NewsController->renderPartial()
+#9 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(79): NewsController->render()
+#10 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): NewsController->actionCreate()
+#11 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#12 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): NewsController->runAction()
+#13 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CAccessControlFilter->filter()
+#15 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): NewsController->filterAccessControl()
+#16 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#18 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): NewsController->runActionWithFilters()
+#19 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): NewsController->run()
+#20 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#21 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#22 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/news/create
+in /Users/dars/Sites/milos/admin/protected/views/news/_form.php (24)
+in /Users/dars/Sites/milos/admin/protected/views/news/create.php (15)
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (79)
+2011/06/19 23:05:12 [error] [exception.CException] exception 'CException' with message 'CActiveForm does not have a method named "hideField".' in /Users/dars/Sites/milos/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('hideField', Array)
+#1 /Users/dars/Sites/milos/admin/protected/views/news/_form.php(24): CActiveForm->hideField(Object(Boards), 'taxonomy_id', 1)
+#2 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require('/Users/dars/Sit...')
+#3 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): CBaseController->renderInternal('/Users/dars/Sit...', Array, true)
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): CBaseController->renderFile('/Users/dars/Sit...', Array, true)
+#5 /Users/dars/Sites/milos/admin/protected/views/news/create.php(15): CController->renderPartial('_form', Array)
+#6 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require('/Users/dars/Sit...')
+#7 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): CBaseController->renderInternal('/Users/dars/Sit...', Array, true)
+#8 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): CBaseController->renderFile('/Users/dars/Sit...', Array, true)
+#9 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): CController->renderPartial('create', Array, true)
+#10 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(79): CController->render('create', Array)
+#11 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): NewsController->actionCreate()
+#12 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#13 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#16 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#19 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('create')
+#21 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('news/create')
+#22 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#23 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#24 {main} REQUEST_URI=/~Dars/milos/admin/news/create
+2011/06/19 23:05:18 [error] [php] Cannot use a scalar value as an array (/Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php:1979)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/views/news/_form.php(24): CActiveForm->hiddenField()
+#1 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require()
+#2 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#4 /Users/dars/Sites/milos/admin/protected/views/news/create.php(15): NewsController->renderPartial()
+#5 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require()
+#6 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#7 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#8 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): NewsController->renderPartial()
+#9 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(79): NewsController->render()
+#10 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): NewsController->actionCreate()
+#11 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#12 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): NewsController->runAction()
+#13 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CAccessControlFilter->filter()
+#15 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): NewsController->filterAccessControl()
+#16 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#18 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): NewsController->runActionWithFilters()
+#19 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): NewsController->run()
+#20 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#21 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#22 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/news/create
+in /Users/dars/Sites/milos/admin/protected/views/news/_form.php (24)
+in /Users/dars/Sites/milos/admin/protected/views/news/create.php (15)
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (79)
+2011/06/20 00:07:46 [warning] [application] Failed to set unsafe attribute "create_at".
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (72)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/20 01:14:20 [error] [php] mb_substr() expects parameter 3 to be long, string given (/Users/dars/Sites/milos/admin/protected/views/news/_view.php:12)
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#1 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#2 /Users/dars/Sites/milos/yii/framework/zii/widgets/CListView.php(234): NewsController->renderPartial()
+#3 /Users/dars/Sites/milos/yii/framework/zii/widgets/CBaseListView.php(158): CListView->renderItems()
+#4 unknown(0): CListView->renderSection()
+#5 /Users/dars/Sites/milos/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback()
+#6 /Users/dars/Sites/milos/yii/framework/zii/widgets/CBaseListView.php(126): CListView->renderContent()
+#7 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(166): CListView->run()
+#8 /Users/dars/Sites/milos/admin/protected/views/news/index.php(17): NewsController->widget()
+#9 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require()
+#10 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#11 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#12 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): NewsController->renderPartial()
+#13 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(135): NewsController->render()
+#14 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): NewsController->actionIndex()
+#15 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#16 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): NewsController->runAction()
+#17 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CAccessControlFilter->filter()
+#19 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): NewsController->filterAccessControl()
+#20 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#21 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#22 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): NewsController->runActionWithFilters()
+#23 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): NewsController->run()
+#24 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#25 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#26 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/news
+in /Users/dars/Sites/milos/admin/protected/views/news/_view.php (12)
+in /Users/dars/Sites/milos/admin/protected/views/news/index.php (17)
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (135)
+2011/06/20 01:14:41 [error] [php] mb_substr() expects parameter 3 to be long, string given (/Users/dars/Sites/milos/admin/protected/views/news/_view.php:12)
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#1 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#2 /Users/dars/Sites/milos/yii/framework/zii/widgets/CListView.php(234): NewsController->renderPartial()
+#3 /Users/dars/Sites/milos/yii/framework/zii/widgets/CBaseListView.php(158): CListView->renderItems()
+#4 unknown(0): CListView->renderSection()
+#5 /Users/dars/Sites/milos/yii/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback()
+#6 /Users/dars/Sites/milos/yii/framework/zii/widgets/CBaseListView.php(126): CListView->renderContent()
+#7 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(166): CListView->run()
+#8 /Users/dars/Sites/milos/admin/protected/views/news/index.php(17): NewsController->widget()
+#9 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require()
+#10 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): NewsController->renderInternal()
+#11 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): NewsController->renderFile()
+#12 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): NewsController->renderPartial()
+#13 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(135): NewsController->render()
+#14 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): NewsController->actionIndex()
+#15 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#16 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): NewsController->runAction()
+#17 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#18 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CAccessControlFilter->filter()
+#19 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): NewsController->filterAccessControl()
+#20 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#21 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#22 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): NewsController->runActionWithFilters()
+#23 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): NewsController->run()
+#24 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#25 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#26 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/news
+in /Users/dars/Sites/milos/admin/protected/views/news/_view.php (12)
+in /Users/dars/Sites/milos/admin/protected/views/news/index.php (17)
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (135)
+2011/06/21 01:26:49 [warning] [application] Failed to set unsafe attribute "update_at".
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (97)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:45:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/ckupdate".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('admin/ckupdate')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/admin/ckupdate?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:46:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckupdate".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('ckupdate')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/ckupdate?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:50:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系統無法找到請求的 "index" 動作.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:477
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(262): CController->missingAction('')
+#1 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('CKUpload')
+#3 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/~Dars/milos/admin/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:50:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系統無法找到請求的 "index" 動作.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:477
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(262): CController->missingAction('')
+#1 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('CKUpload')
+#3 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/~Dars/milos/admin/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:50:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系統無法找到請求的 "index" 動作.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:477
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(262): CController->missingAction('')
+#1 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('CKUpload')
+#3 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/~Dars/milos/admin/CKUpload/?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系統無法找到請求的 "index" 動作.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:477
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(262): CController->missingAction('')
+#1 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('cKUpload')
+#3 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/~Dars/milos/admin/cKUpload/?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系統無法找到請求的 "index" 動作.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:477
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(262): CController->missingAction('')
+#1 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('cKUpload')
+#3 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/~Dars/milos/admin/cKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:51:27 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:51:53 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:52:41 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:53:29 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系統無法找到請求的 "index" 動作.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:477
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(262): CController->missingAction('')
+#1 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('CKUpload')
+#3 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/~Dars/milos/admin/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 01:55:25 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:56:19 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:56:29 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:57:36 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:58:12 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:58:25 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:58:27 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:58:27 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 01:58:27 [error] [php] include(Upload.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Users/dars/Sites/milos/yii/framework/YiiBase.php:396)
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): spl_autoload_call()
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CkuploadController->runAction()
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CkuploadController->runActionWithFilters()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CkuploadController->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+in /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php (8)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 02:20:40 [error] [exception.CException] exception 'CException' with message '屬性 "CHttpRequest.basePath" 未被定義.' in /Users/dars/Sites/milos/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/dars/Sites/milos/admin/protected/controllers/CkuploadController.php(8): CComponent->__get('basePath')
+#1 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): CkuploadController->actionCKUpload()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('CKUpload')
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('Ckupload/CKUplo...')
+#7 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#8 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#9 {main} REQUEST_URI=/~Dars/milos/admin/Ckupload/CKUpload?CKEditor=Boards_content&CKEditorFuncNum=2&langCode=zh
+2011/06/21 02:22:25 [warning] [application] Failed to set unsafe attribute "update_at".
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (97)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/06/21 20:34:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "blog".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('blog')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/blog
+2011/06/21 20:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "blog".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('blog')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/blog
+2011/06/21 21:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "qanda".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('qanda')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/qanda
+2011/06/21 21:43:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "qanda".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('qanda')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/qanda
+2011/06/21 22:08:04 [error] [exception.CDbException] exception 'CDbException' with message 'Table "content" 沒有名為 "taxonomy" 的欄位.' in /Users/dars/Sites/milos/yii/framework/db/schema/CDbCommandBuilder.php:568
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/db/ar/CActiveRecord.php(1428): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /Users/dars/Sites/milos/admin/protected/controllers/PlasticController.php(12): CActiveRecord->findByAttributes(Array)
+#2 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): PlasticController->actionView()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#5 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('view')
+#7 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('plastic/view')
+#8 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#9 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/~Dars/milos/admin/plastic/view/1
+2011/06/21 23:06:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "qanda".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('qanda')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/qanda
+2011/06/21 23:06:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "qanda".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('qanda')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/qanda
+2011/06/22 01:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "qanda".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('qanda')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/qanda
+2011/06/26 18:01:12 [error] [exception.CDbException] exception 'CDbException' with message 'Table "content" 沒有名為 "0" 的欄位.' in /Users/dars/Sites/milos/yii/framework/db/schema/CDbCommandBuilder.php:568
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/db/ar/CActiveRecord.php(1445): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /Users/dars/Sites/milos/admin/protected/controllers/BlogController.php(7): CActiveRecord->findAllByAttributes(Array)
+#2 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): BlogController->actionIndex()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#5 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#7 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('blog')
+#8 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#9 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/~Dars/milos/admin/blog
+2011/06/26 22:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business3/css/jquery.fancybox-1.3.4.css".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('themes/business...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/themes/business3/css/jquery.fancybox-1.3.4.css
+2011/06/26 22:25:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business3/css/jquery.fancybox-1.3.4.css".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('themes/business...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/themes/business3/css/jquery.fancybox-1.3.4.css
+2011/06/26 22:26:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/business3/css/jquery.fancybox-1.3.4.css".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('themes/business...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/themes/business3/css/jquery.fancybox-1.3.4.css
+2011/06/26 22:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/undefined".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('upload/undefine...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/upload/undefined
+2011/06/26 22:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/undefined".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('upload/undefine...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/upload/undefined
+2011/06/26 22:39:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/undefined".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('upload/undefine...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/upload/undefined
+2011/06/26 23:30:27 [error] [exception.CException] exception 'CException' with message '屬性 "Boards.uuid" 未被定義.' in /Users/dars/Sites/milos/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/db/ar/CActiveRecord.php(128): CComponent->__get('uuid')
+#1 /Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php(2050): CActiveRecord->__get('uuid')
+#2 /Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php(1777): CHtml::resolveValue(Object(Boards), 'uuid')
+#3 /Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php(1200): CHtml::activeInputField('hidden', Object(Boards), 'uuid', Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/widgets/CActiveForm.php(582): CHtml::activeHiddenField(Object(Boards), 'uuid', Array)
+#5 /Users/dars/Sites/milos/admin/protected/views/qanda/index.php(17): CActiveForm->hiddenField(Object(Boards), 'uuid')
+#6 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require('/Users/dars/Sit...')
+#7 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): CBaseController->renderInternal('/Users/dars/Sit...', Array, true)
+#8 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): CBaseController->renderFile('/Users/dars/Sit...', Array, true)
+#9 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): CController->renderPartial('index', Array, true)
+#10 /Users/dars/Sites/milos/admin/protected/controllers/QandaController.php(24): CController->render('index', Array)
+#11 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): QandaController->actionIndex()
+#12 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#13 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#14 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#16 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('qanda')
+#17 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#18 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#19 {main} REQUEST_URI=/~Dars/milos/admin/qanda
+2011/06/27 00:51:45 [error] [exception.CException] exception 'CException' with message 'PixController 無法找到請求的 "index" view.' in /Users/dars/Sites/milos/yii/framework/web/CController.php:875
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): CController->renderPartial('index', NULL, true)
+#1 /Users/dars/Sites/milos/admin/protected/controllers/PixController.php(7): CController->render('index')
+#2 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): PixController->actionIndex()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#5 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#7 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('pix')
+#8 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#9 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/~Dars/milos/admin/pix/

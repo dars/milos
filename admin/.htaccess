@@ -1,7 +1,10 @@
-<ifModule mod_rewrite.c>
-	RewriteEngine on
-	RewriteBase /~Dars/milos/admin
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^(.*)$ index.php/$1 [L]
-</ifModule>
+IndexIgnore */*
+RewriteEngine on
+RewriteBase /~Dars/milos/admin
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
