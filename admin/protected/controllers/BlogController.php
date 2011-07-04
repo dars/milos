@@ -6,10 +6,10 @@ class BlogController extends Controller
 	{
 		if(!empty($_POST)){
 			$i=0;
-			while($i<7){
+			while($i<6){
 				$time = date('Y-m-d H:i:s');
 				$model = Content::model()->findByPk($_POST['id'][$i]);
-				$model->content = $_POST['content'][$i];
+/* 				$model->content = $_POST['content'][$i]; */
 				$model->service = $_POST['service'][$i];
 				$model->tips = $_POST['tips'][$i];
 				$model->uuid = $_POST['uuid'][$i];
@@ -19,7 +19,7 @@ class BlogController extends Controller
 			}
 			echo '{"success":true}';
 		}else{
-			$model = Content::model()->findAllByAttributes(array('taxonomy_id'=>22));
+			$model = Content::model()->findAll('taxonomy_id=22 ORDER BY id');
 			$this->render('index',array('model'=>$model));
 		}
 	}

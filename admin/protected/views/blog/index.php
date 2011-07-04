@@ -38,11 +38,19 @@ textarea,input[type='text']{
 </style>
 <form method="post" name="form1" id="form1">
 	<?php
+		$str = array(
+			'左圖',
+			'TOP1',
+			'TOP2',
+			'TOP3',
+			'TOP4',
+			'TOP5',
+		);
 		$i=0;
 		foreach($model as $m):
 			echo '<div class="data-list">';
 			echo '<input type="hidden" name="id[]" value='.$m->id.'>';
-			echo '<div class="num">'.($i+1).'.';
+			echo '<div class="num">'.$str[$i].'.';
 			echo '<a id="up_'.$i.'" href="javascript:void(0)" class="up_pix_btn">上傳圖片</a>';
 			echo '<input type="hidden" id="name_'.$i.'" name="uuid[]">';
 			echo '<div id="pix_'.$i.'">';
@@ -54,8 +62,8 @@ textarea,input[type='text']{
 			echo '<div>';
 			echo '<label>標題</label>';
 			echo '<input type="text" name="tips[]" id="tips_'.$i.'" value=\''.$m->tips.'\'>';
-			echo '<label>簡介</label>';
-			echo '<textarea name="content[]" id="content_'.$i.'">'.$m->content.'</textarea>';
+/* 			echo '<label>簡介</label>'; */
+/* 			echo '<textarea name="content[]" id="content_'.$i.'">'.$m->content.'</textarea>'; */
 			echo '<label>連結網址</label>';
 			echo '<input type="text" name="service[]" id="service_'.$i.'" value='.$m->service.'>';
 			echo '</div>';

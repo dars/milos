@@ -1,6 +1,6 @@
 <?php
 require_once("db.php");
-$news = $db->boards()->where('taxonomy_id',1);
+$news = $db->boards()->where('taxonomy_id',1)->where('publish',1)->order('weight desc,id desc');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

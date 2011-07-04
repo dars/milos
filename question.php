@@ -176,76 +176,9 @@ function MM_swapImage() { //v3.0
                     <td width="28">&nbsp;</td>
                     <td width="680" class="text_indexin"><table width="680" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                        <td><table width="680" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td><table width="680" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td width="26" valign="top" class="question_box">Ｑ：</td>
-                                <td width="654" class="question_box">整形醫美診所這麼多，該如何選擇呢?</td>
-                              </tr>
-                              <tr>
-                                <td valign="top"><span class="text_plastictaital01">Ａ：</span></td>
-                                <td>整形是在自己身體上做改變，選擇好的診所是非常重要的。很多診所是商人看上醫學美容這塊大餅而匆匆忙忙開來賺錢，這類型的診所通常會有很多的促銷活動、很多贈品、很多療程、很多點數等等。這些診所會找比較沒有經驗的醫師(而且通常不是整形外科專科醫師)來看診與執行醫療行為。應該優先從醫師本身的資歷與口碑來做判斷，很有名的醫師不一定就是適合妳的醫師，建議要親自和醫師談談，可以感受到醫師的誠懇與細心，才是對自己身體的保障。</td>
-                              </tr>
-                            </table></td>
-                          </tr>
-                          <tr>
-                            <td><img src="images/question_Separated.gif" width="680" height="21" /></td>
-                          </tr>
-                          <tr>
-                            <td><table width="680" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td width="26" valign="top" class="question_box">Ｑ：</td>
-                                <td width="654" class="question_box">那整形醫師又要怎麼選擇?</td>
-                              </tr>
-                              <tr>
-                                <td valign="top"><span class="text_plastictaital01">Ａ：</span></td>
-                                <td>首先要看是不是真的是科班訓練出來的&rdquo;整形外科專科醫師&rdquo;，很多說自己是&rdquo;美容醫師&rdquo;的人原本並不是整外專科醫師，而是一般外科、其他外科甚至連外科醫師都不是(家醫科、耳鼻喉科、婦產科…..)。接下來就是看醫師本人對於您狀況的解說是否誠懇而適當，有沒有強迫推銷妳原本不想要做的療程。一個有醫德的醫師不但解說清楚，術中會用心，術後會關心與負責。</td>
-                              </tr>
-                            </table></td>
-                          </tr>
-                          <tr>
-                            <td><img src="images/question_Separated.gif" width="680" height="21" /></td>
-                          </tr>
-                          <tr>
-                            <td><table width="680" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td width="26" valign="top" class="question_box">Ｑ：</td>
-                                <td width="654" class="question_box">同樣的手術為什麼價格差那麼多?</td>
-                              </tr>
-                              <tr>
-                                <td valign="top"><span class="text_plastictaital01">Ａ：</span></td>
-                                <td>這和外觀看起來差不多的衣服在不同地方的價格不同道理是一樣的，很多低價的療程後面帶來的是品質不良與術後服務的缺乏。一個對自己手藝有自信而且很仔細的醫師，應該不會狂砍自己手工的價格，至於很貴很貴的價格，可能是診所花在行銷的費用太高，或是仗著知名度抬高價格。當然同樣部位的手術(例如隆鼻)，也有可能是方法和材料不同，而有價格上的差異。</td>
-                              </tr>
-                            </table></td>
-                          </tr>
-                          <tr>
-                            <td><img src="images/question_Separated.gif" width="680" height="21" /></td>
-                          </tr>
-                          <tr>
-                            <td><table width="680" border="0" cellspacing="0" cellpadding="0">
-                              <tr>
-                                <td width="26" valign="top" class="question_box">Ｑ：</td>
-                                <td width="654" class="question_box">是不是新一代的機器比較好?</td>
-                              </tr>
-                              <tr>
-                                <td valign="top"><span class="text_plastictaital01">Ａ：</span></td>
-                                <td>機器是由人操作的，人的知識與用心程度遠比機器的改款重要。有時候新的機器能量比較強，操作的醫師因為還不熟悉這麼新的東西，一不小心後遺症就出來了。</td>
-                              </tr>
-                            </table></td>
-                          </tr>
-                        </table></td>
+                        <td><?php echo $plastic['content']?></td>
                       </tr>
-                      <tr>
-                        <td><table width="680" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td height="10"></td>
-                          </tr>
-                          <tr>
-                            <td class="text_plastictaital">§ 版權所有，如需轉載請註明出處！<span class="text_plastictaital01">( 米洛斯整形外科診所 - 張博全院長 )</span></td>
-                          </tr>
-                        </table></td>
-                      </tr>
+                      
                       <tr>
                         <td>&nbsp;</td>
                       </tr>

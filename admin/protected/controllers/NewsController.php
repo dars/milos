@@ -96,7 +96,7 @@ class NewsController extends Controller
 			$_POST['Boards']['update_at'] = date('Y-m-d H:i:s');
 			$model->attributes=$_POST['Boards'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('update','id'=>$model->id));
 		}
 
 		$this->render('update',array(
@@ -118,7 +118,7 @@ class NewsController extends Controller
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				$this->redirect(Yii::app()->request->baseUrl.'/news');
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
@@ -130,7 +130,7 @@ class NewsController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Boards',array(
-			'criteria'=>array('condition'=>'taxonomy_id=1')
+			'criteria'=>array('condition'=>'taxonomy_id=1 ORDER BY weight DESC,id DESC'),
 		));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,

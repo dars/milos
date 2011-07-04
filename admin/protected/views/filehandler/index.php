@@ -1,7 +1,7 @@
 <?php
 $this->widget('application.extensions.Plupload.PluploadWidget', array(
    'config' => array(
-       'runtimes' => 'browserplus,html5',
+       'runtimes' => 'flash,silverlight,browserplus,html5',
        'url' => $this->createUrl('filehandler/upload'),
        'max_file_size' => '30mb',
        'unique_names' => true,

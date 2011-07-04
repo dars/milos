@@ -1,6 +1,7 @@
 <?php
 require_once("db.php");
-$news = $db->boards()->where('taxonomy_id','1')->limit(4);
+$news = $db->boards()->where('taxonomy_id','1')->where('publish',1)->order('weight DESC,id DESC')->limit(4);
+$content = $db->content()->where('taxonomy_id','22')->order('id');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -86,15 +87,22 @@ $news = $db->boards()->where('taxonomy_id','1')->limit(4);
                 <td><table width="658" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="3" bgcolor="#B7D5ED"></td>
-                    <td width="282"><a href="about_05.html"><img src="images/index_hotnews_photo.jpg" alt="Hot News" width="282" height="214" border="0" /></a></td>
+                    <td width="282">
+                    	<?php $tmp = $content->fetch();?>
+                    	<a href="<?php echo $tmp['service']?>">
+                    		<img src="admin/upload/<?php echo $tmp['uuid']?>" alt="<?php echo $tmp['tips']?>" width="282" height="214" border="0" />
+                    	</a>
+                    </td>
                     <td width="3" bgcolor="#B7D5ED"></td>
-                    <td width="367"><table width="367" border="0" cellspacing="0" cellpadding="13">
+                    <td width="367" style="vertical-align:top;"><table width="367" border="0" cellspacing="0" cellpadding="13">
                       <tr>
                         <td><table width="340" border="0" cellspacing="0" cellpadding="0">
                           <?php foreach($news as $n):?>
                           <tr>
-                            <td class="text_indexin01"><a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01"><?php echo $n['title']?></a><br />
-							<?php echo mb_substr(strip_tags($n['content']),0,20,'utf8')?>......<a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01">[more]</a></td>
+                            <td class="text_indexin01">
+                            	<a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01"><?php echo $n['title']?></a><br />
+								<?php echo $n['tips']?><a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01">[more]</a>
+							</td>
                           </tr>
                           <tr>
                             <td><img src="images/index_hotnews_01.gif" width="340" height="11" /></td>
@@ -157,14 +165,15 @@ $news = $db->boards()->where('taxonomy_id','1')->limit(4);
                           <tr>
                             <td height="3"></td>
                           </tr>
+                          <?php $tmp = $content->fetch();?>
                           <tr>
-                            <td height="87"><a href="plastic_03.html"><img src="images/index_top5_photo01.jpg" alt="電眼再現" width="112" height="87" border="0" /></a></td>
+                            <td height="87"><a href="<?php echo $tmp['service']?>"><img src="admin/upload/<?php echo $tmp['uuid']?>" alt="<?php echo $tmp['tips']?>" width="112" height="87" border="0" /></a></td>
                           </tr>
                           <tr>
                             <td height="2"></td>
                           </tr>
                           <tr>
-                            <td align="left"><a href="plastic_03.html" title="電眼再現" class="text_moreurl03">&gt; 電眼再現</a></td>
+                            <td align="left"><a href="<?php echo $tmp['service']?>" title="<?php echo $tmp['tips']?>" class="text_moreurl03">&gt; <?php echo $tmp['tips']?></a></td>
                           </tr>
                         </table></td>
                         <td width="12">&nbsp;</td>
@@ -172,14 +181,15 @@ $news = $db->boards()->where('taxonomy_id','1')->limit(4);
                           <tr>
                             <td height="3"></td>
                           </tr>
+                          <?php $tmp = $content->fetch();?>
                           <tr>
-                            <td height="87"><a href="plastic_02.html"><img src="images/index_top5_photo02.jpg" alt="精緻鼻雕" width="112" height="87" border="0" /></a></td>
+                            <td height="87"><a href="<?php echo $tmp['service']?>"><img src="admin/upload/<?php echo $tmp['uuid']?>" alt="<?php echo $tmp['tips']?>" width="112" height="87" border="0" /></a></td>
                           </tr>
                           <tr>
                             <td height="2"></td>
                           </tr>
                           <tr>
-                            <td align="left"><a href="plastic_02.html" title="精緻鼻雕" class="text_moreurl03">&gt; 精緻鼻雕</a></td>
+                            <td align="left"><a href="<?php echo $tmp['service']?>" title="<?php echo $tmp['tips']?>" class="text_moreurl03">&gt; <?php echo $tmp['tips']?></a></td>
                           </tr>
                         </table></td>
                         <td width="12">&nbsp;</td>
@@ -187,14 +197,15 @@ $news = $db->boards()->where('taxonomy_id','1')->limit(4);
                           <tr>
                             <td height="3"></td>
                           </tr>
+                          <?php $tmp = $content->fetch();?>
                           <tr>
-                            <td height="87"><a href="beauty_03.html"><img src="images/index_top5_photo03.jpg" alt="肉毒桿菌" width="112" height="87" border="0" /></a></td>
+                            <td height="87"><a href="<?php echo $tmp['service']?>"><img src="admin/upload/<?php echo $tmp['uuid']?>" alt="<?php echo $tmp['tips']?>" width="112" height="87" border="0" /></a></td>
                           </tr>
                           <tr>
                             <td height="2"></td>
                           </tr>
                           <tr>
-                            <td align="left"><a href="beauty_03.html" title="肉毒桿菌" class="text_moreurl03">&gt; 肉毒桿菌</a></td>
+                            <td align="left"><a href="<?php echo $tmp['service']?>" title="<?php echo $tmp['tips']?>" class="text_moreurl03">&gt; <?php echo $tmp['tips']?></a></td>
                           </tr>
                         </table></td>
                         <td width="12">&nbsp;</td>
@@ -202,14 +213,15 @@ $news = $db->boards()->where('taxonomy_id','1')->limit(4);
                           <tr>
                             <td height="3"></td>
                           </tr>
+                          <?php $tmp = $content->fetch();?>
                           <tr>
-                            <td height="87"><a href="plastic_05.html"><img src="images/index_top5_photo04.jpg" alt="臉型美化" width="112" height="87" border="0" /></a></td>
+                            <td height="87"><a href="<?php echo $tmp['service']?>"><img src="admin/upload/<?php echo $tmp['uuid']?>" alt="臉型美化" width="112" height="87" border="0" /></a></td>
                           </tr>
                           <tr>
                             <td height="2"></td>
                           </tr>
                           <tr>
-                            <td align="left"><a href="plastic_05.html" title="臉型美化" class="text_moreurl03">&gt; 臉型美化</a></td>
+                            <td align="left"><a href="<?php echo $tmp['service']?>" title="<?php echo $tmp['tips']?>" class="text_moreurl03">&gt; <?php echo $tmp['tips']?></a></td>
                           </tr>
                         </table></td>
                         <td width="12">&nbsp;</td>
@@ -217,14 +229,15 @@ $news = $db->boards()->where('taxonomy_id','1')->limit(4);
                           <tr>
                             <td height="3"></td>
                           </tr>
+                          <?php $tmp = $content->fetch();?>
                           <tr>
-                            <td height="87"><a href="plastic_06.html"><img src="images/index_top5_photo05.jpg" alt="缺陷修正" width="112" height="87" border="0" /></a></td>
+                            <td height="87"><a href="<?php echo $tmp['service']?>"><img src="admin/upload/<?php echo $tmp['uuid']?>" alt="<?php echo $tmp['tips']?>" width="112" height="87" border="0" /></a></td>
                           </tr>
                           <tr>
                             <td height="2"></td>
                           </tr>
                           <tr>
-                            <td align="left"><a href="plastic_06.html" title="缺陷修正" class="text_moreurl03">&gt; 缺陷修正</a></td>
+                            <td align="left"><a href="<?php echo $tmp['service']?>" title="<?php echo $tmp['tips']?>" class="text_moreurl03">&gt; <?php echo $tmp['tips']?></a></td>
                           </tr>
                         </table></td>
                         <td width="12">&nbsp;</td>

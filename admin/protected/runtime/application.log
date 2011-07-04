@@ -551,3 +551,107 @@ Stack trace:
 #8 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
 #9 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
 #10 {main} REQUEST_URI=/~Dars/milos/admin/pix/
+2011/06/30 23:13:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/p163ghfqqb349je71ndg1abnvq61.jpeg".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('images/upload/p...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/images/upload/p163ghfqqb349je71ndg1abnvq61.jpeg
+2011/06/30 23:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/p163ghfqqb349je71ndg1abnvq61.jpeg".' in /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('images/upload/p...')
+#1 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/~Dars/milos/admin/images/upload/p163ghfqqb349je71ndg1abnvq61.jpeg
+2011/06/30 23:35:44 [error] [exception.CDbException] exception 'CDbException' with message 'Table "content" 沒有名為 "order" 的欄位.' in /Users/dars/Sites/milos/yii/framework/db/schema/CDbCommandBuilder.php:568
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/db/ar/CActiveRecord.php(1445): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /Users/dars/Sites/milos/admin/protected/controllers/BlogController.php(22): CActiveRecord->findAllByAttributes(Array)
+#2 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): BlogController->actionIndex()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#5 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#7 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('blog')
+#8 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#9 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/~Dars/milos/admin/blog
+2011/06/30 23:36:32 [error] [exception.CDbException] exception 'CDbException' with message 'Table "content" 沒有名為 "0" 的欄位.' in /Users/dars/Sites/milos/yii/framework/db/schema/CDbCommandBuilder.php:568
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/db/ar/CActiveRecord.php(1445): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /Users/dars/Sites/milos/admin/protected/controllers/BlogController.php(22): CActiveRecord->findAllByAttributes(Array)
+#2 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): BlogController->actionIndex()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#5 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#7 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('blog')
+#8 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#9 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/~Dars/milos/admin/blog
+2011/06/30 23:36:44 [error] [php] Invalid argument supplied for foreach() (/Users/dars/Sites/milos/yii/framework/db/schema/CDbCommandBuilder.php:544)
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): BlogController->actionIndex()
+#1 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams()
+#2 /Users/dars/Sites/milos/yii/framework/web/CController.php(278): BlogController->runAction()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): BlogController->runActionWithFilters()
+#4 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): BlogController->run()
+#5 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#6 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#7 /Users/dars/Sites/milos/admin/index.php(13): CWebApplication->run()
+REQUEST_URI=/~Dars/milos/admin/blog
+in /Users/dars/Sites/milos/admin/protected/controllers/BlogController.php (22)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/07/01 00:06:04 [error] [exception.CException] exception 'CException' with message '屬性 "Boards." 未被定義.' in /Users/dars/Sites/milos/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/db/ar/CActiveRecord.php(128): CComponent->__get('')
+#1 /Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php(2050): CActiveRecord->__get('')
+#2 /Users/dars/Sites/milos/yii/framework/web/helpers/CHtml.php(1384): CHtml::resolveValue(Object(Boards), '')
+#3 /Users/dars/Sites/milos/yii/framework/web/widgets/CActiveForm.php(673): CHtml::activeDropDownList(Object(Boards), '', Array, Array)
+#4 /Users/dars/Sites/milos/admin/protected/views/news/_form.php(26): CActiveForm->dropDownList(Object(Boards), '', Array)
+#5 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require('/Users/dars/Sit...')
+#6 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): CBaseController->renderInternal('/Users/dars/Sit...', Array, true)
+#7 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): CBaseController->renderFile('/Users/dars/Sit...', Array, true)
+#8 /Users/dars/Sites/milos/admin/protected/views/news/update.php(17): CController->renderPartial('_form', Array)
+#9 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(119): require('/Users/dars/Sit...')
+#10 /Users/dars/Sites/milos/yii/framework/web/CBaseController.php(88): CBaseController->renderInternal('/Users/dars/Sit...', Array, true)
+#11 /Users/dars/Sites/milos/yii/framework/web/CController.php(866): CBaseController->renderFile('/Users/dars/Sit...', Array, true)
+#12 /Users/dars/Sites/milos/yii/framework/web/CController.php(779): CController->renderPartial('update', Array, true)
+#13 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(104): CController->render('update', Array)
+#14 [internal function]: NewsController->actionUpdate('4')
+#15 /Users/dars/Sites/milos/yii/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#16 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#17 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#18 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#21 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#24 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('update')
+#26 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('news/update')
+#27 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#28 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#29 {main} REQUEST_URI=/~Dars/milos/admin/news/update/4
+2011/07/01 00:06:38 [warning] [application] Failed to set unsafe attribute "update_at".
+in /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php (97)
+in /Users/dars/Sites/milos/admin/index.php (13)
+2011/07/04 12:05:01 [error] [exception.CException] exception 'CException' with message '屬性 "CActiveDataProvider.order" 未被定義.' in /Users/dars/Sites/milos/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/dars/Sites/milos/yii/framework/web/CActiveDataProvider.php(81): CComponent->__set('order', 'id')
+#1 /Users/dars/Sites/milos/admin/protected/controllers/NewsController.php(135): CActiveDataProvider->__construct('Boards', Array)
+#2 /Users/dars/Sites/milos/yii/framework/web/actions/CInlineAction.php(50): NewsController->actionIndex()
+#3 /Users/dars/Sites/milos/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/dars/Sites/milos/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /Users/dars/Sites/milos/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#7 /Users/dars/Sites/milos/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/dars/Sites/milos/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/dars/Sites/milos/yii/framework/web/CController.php(283): CFilterChain->run()
+#10 /Users/dars/Sites/milos/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(328): CController->run('')
+#12 /Users/dars/Sites/milos/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('news')
+#13 /Users/dars/Sites/milos/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#14 /Users/dars/Sites/milos/admin/index.php(13): CApplication->run()
+#15 {main} REQUEST_URI=/~Dars/milos/admin/news

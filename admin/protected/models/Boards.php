@@ -6,10 +6,13 @@
  * The followings are the available columns in table 'boards':
  * @property integer $id
  * @property string $title
+ * @property string $tips
  * @property string $content
  * @property string $created_at
  * @property string $updated_at
  * @property integer $taxonomy_id
+ * @property integer $publish
+ * @property double $weight
  */
 class Boards extends CActiveRecord
 {
@@ -38,12 +41,13 @@ class Boards extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('taxonomy_id', 'numerical', 'integerOnly'=>true),
+			array('taxonomy_id, publish', 'numerical', 'integerOnly'=>true),
+			array('weight', 'numerical'),
 			array('title', 'length', 'max'=>100),
-			array('content, created_at, updated_at', 'safe'),
+			array('tips, content, created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, content, created_at, updated_at, taxonomy_id', 'safe', 'on'=>'search'),
+			array('id, title, tips, content, created_at, updated_at, taxonomy_id, publish, weight', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,10 +70,13 @@ class Boards extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => '標題',
+			'tips' => '摘要',
 			'content' => '內容',
-			'created_at' => '建立時間',
-			'updated_at' => '最後更新時間',
-			'taxonomy_id' => 'Taxonomy',
+			'created_at' => 'Created At',
+			'updated_at' => 'Updated At',
+			'taxonomy_id' => '分類',
+			'publish' => '上下架',
+			'weight' => '比重',
 		);
 	}
 
@@ -86,10 +93,13 @@ class Boards extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
+		$criteria->compare('tips',$this->tips,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
 		$criteria->compare('taxonomy_id',$this->taxonomy_id);
+		$criteria->compare('publish',$this->publish);
+		$criteria->compare('weight',$this->weight);
 
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
