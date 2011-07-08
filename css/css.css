@@ -442,3 +442,16 @@
 .side_links a{
 	color:#000;
 }
+.hotnews_icon {
+	overflow: visible;
+	position: absolute;
+	visibility: inherit;
+	z-index: 1;
+	height: 35px;
+	width: 50px;
+	left: 260px;
+	top: -455px;
+}
+a.first{
+	color:#F00;
+}
