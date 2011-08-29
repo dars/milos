@@ -103,12 +103,15 @@ $content = $db->content()->where('taxonomy_id','22')->order('id');
                           ?>
                           <tr>
                             <td class="text_indexin01">
-                            	<a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01<?php if($i==0){echo " first";}?>"><?php echo $n['title']?></a><br />
+                            	<a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01<?php if($i<=1){echo " first";}?>">
+                            		<?php if($i==0){echo '<img width="26" height="12" border="0" style="margin-bottom:-2px" alt="hot" src="images/hot.gif">';}?>
+                            		<?php if($i==1){echo '<img width="26" height="12" border="0" style="margin-bottom:-2px" alt="hot" src="images/new.gif">';}?>
+                            		<?php echo $n['title']?></a><br />
 								<?php echo $n['tips']?><a href="news.php?id=<?php echo $n['id']?>" class="text_moreurl01">[more]</a>
 							</td>
                           </tr>
                           <tr>
-                            <td><img src="images/index_hotnews_01.gif" width="340" height="11" /></td>
+                            <td><img width="340" height="11" src="images/index_hotnews_01.gif"></td>
                           </tr>
                           <?php
                             $i++;
@@ -277,7 +280,7 @@ $content = $db->content()->where('taxonomy_id','22')->order('id');
 營業時間：周一~周五12:00~21:00  周六12:00~18:00  /  預約專線：(02)2700-0164</h1></td>
       </tr>
       <tr>
-          <td height="60" style="position:relative;"><img src="images/hot.png" alt="hot" width="50" height="35" class="hotnews_icon" /></td>
+          <td height="60" style="position:relative;"></td>
         </tr>
     </table></td>
     <td width="50%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

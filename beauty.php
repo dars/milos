@@ -171,7 +171,7 @@ function MM_swapImage() { //v3.0
                               <tr>
                                 <td><table width="680" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
-                                    <td width="450"><img src="admin/upload/<?php echo $p['name']?>" width="450" height="220" /></td>
+                                    <td width="450"><img src="admin/upload/<?php echo $p['name']?>" /></td>
                                     <td width="228" valign="middle" class="plastic_exbox"><table width="228" border="0" cellspacing="0" cellpadding="10">
                                       <tr>
                                         <td><?php echo $p['content']?></td>

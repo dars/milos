@@ -20,7 +20,8 @@ CKEDITOR.editorConfig = function( config )
 		'/',
 		['Styles','Format','Font','FontSize'],
 		['TextColor','BGColor'],
-		['Cut','Copy','Paste','PasteText','PasteFromWord']
+		['Cut','Copy','Paste','PasteText','PasteFromWord'],
+		['Source']
 	];
 	config.filebrowserUploadUrl = base_url+'Ckupload/CKUpload';
 };

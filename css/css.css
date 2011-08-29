@@ -442,6 +442,9 @@
 .side_links a{
 	color:#000;
 }
+a.first{
+	color:#F00;
+}
 .hotnews_icon {
 	overflow: visible;
 	position: absolute;
@@ -451,7 +454,4 @@
 	width: 50px;
 	left: 260px;
 	top: -455px;
-}
-a.first{
-	color:#F00;
 }

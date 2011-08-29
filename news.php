@@ -1,13 +1,16 @@
 <?php
 require_once('db.php');
+
 if(!empty($_GET['less'])){
-	$news = $db->boards()->where('id<'.$_GET['less']);
+	$model = $db->boards()->where('id',$_GET['less'])->fetch();
+	$news = $db->boards()->where('weight>='.$model['weight'])->where('id<>'.$_GET['less'])->order('weight DESC,id DESC');
 	if(count($news)<1){
 		$news = $db->boards()->where('id='.$_GET['less']);
 	}
 }
 if(!empty($_GET['more'])){
-	$news = $db->boards()->where('id>'.$_GET['more']);
+	$model = $db->boards()->where('id',$_GET['more'])->fetch();
+	$news = $db->boards()->where('weight<='.$model['weight'])->where('id<>'.$_GET['more'])->order('weight DESC,id DESC');
 	if(count($news)<1){
 		$news = $db->boards()->where('id='.$_GET['more']);
 	}
