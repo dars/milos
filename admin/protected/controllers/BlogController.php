@@ -12,7 +12,9 @@ class BlogController extends Controller
 /* 				$model->content = $_POST['content'][$i]; */
 				$model->service = $_POST['service'][$i];
 				$model->tips = $_POST['tips'][$i];
-				$model->uuid = $_POST['uuid'][$i];
+				if($_POST['uuid'][$i]){
+					$model->uuid = $_POST['uuid'][$i];
+				}
 				$model->updated_at = $time;
 				$model->save();
 				$i++;
